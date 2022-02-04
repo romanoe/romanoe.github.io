@@ -7,11 +7,7 @@ set -e
 # build
 npm run build
 
-# navigate into the build output directorycd dist
-# if you are deploying to a custom domain
-echo 'www.noemiromano.ch' > CNAME
-git init
-git add -A
-git commit -m 'deploy'
-git push -f git@github.com:romanoe/romanoe.github.io.git main:gh-pages
-cd -
+#deploy
+git add dist
+git commit -m 'adding dist subtree'
+git subtree push --prefix dist origin gh-pages
