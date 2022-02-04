@@ -12,5 +12,5 @@ npm run build
 echo 'www.noemiromano.ch' > CNAME
 git add -A
 git commit -m 'deploy'
-git push origin main:gh-pages
+git push -f git@github.com:romanoe/romanoe.github.io.git main:gh-pages
 cd -
